@@ -45,12 +45,12 @@ namespace deserial_from_xml
         static void Main(string[] args)
         {
             // просто десериализация из XML
-            XmlSerializer serializer = new XmlSerializer(typeof(Citizen));
-            FileStream stream = new FileStream("serialization.xml", FileMode.Open, FileAccess.Read);
+            XmlSerializer serializer = new XmlSerializer(typeof(Citizen));//Отлично!
+            FileStream stream = new FileStream("serialization.xml", FileMode.Open, FileAccess.Read);//Отлично!
 
-            Citizen citizen = (Citizen)serializer.Deserialize(stream);
+            Citizen citizen = (Citizen)serializer.Deserialize(stream);//Отлично!
             stream.Close();
-            Console.WriteLine(citizen.Name + ", " + citizen.Age);
+            Console.WriteLine(citizen.Name + ", " + citizen.Age);//Отлично!
 
             // сериализация с атрибутами
             XmlSerializer serializerXML = new XmlSerializer(typeof(CitizenAtr));

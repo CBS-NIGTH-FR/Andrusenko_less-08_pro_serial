@@ -50,9 +50,9 @@ namespace serial_to_xml
         static void Main(string[] args)
         {
             // просто сериализация в XML
-            Citizen citizen = new Citizen("Вася", 25);
-            FileStream stream = new FileStream("serialization.xml", FileMode.Create, FileAccess.Write);
-            XmlSerializer serializer = new XmlSerializer(typeof(Citizen));
+            Citizen citizen = new Citizen("Вася", 25);//Отлично!
+            FileStream stream = new FileStream("serialization.xml", FileMode.Create, FileAccess.Write);//Отлично!
+            XmlSerializer serializer = new XmlSerializer(typeof(Citizen));//Отлично!
 
             serializer.Serialize(stream, citizen); //гражданина засериализовать в поток
             stream.Close();

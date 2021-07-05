@@ -28,12 +28,12 @@ namespace add
             formatter.Serialize(stream, citizen); //гражданина засериализовать в поток
             stream.Close();
             
-            FileStream streamDe = File.Open("Base.data", FileMode.Open);
+            FileStream streamDe = File.Open("Base.data", FileMode.Open);//Отлично!
             Citizen citizenDe = formatter.Deserialize(streamDe) as Citizen; //десериализовать поток в гражданина, если можно
-            streamDe.Close();
-            if (citizen != null)
+            streamDe.Close();//Отлично!
+            if (citizen != null)//Отлично!
             {
-                Console.WriteLine("Name: {0}, Age: {1}", citizenDe.Name, citizenDe.Age);
+                Console.WriteLine("Name: {0}, Age: {1}", citizenDe.Name, citizenDe.Age);//Отлично!
             }
 
             Console.ReadLine();
